@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Casita Sedona</title>
+
+<style>
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #00005D;
+}
+
+/* 1) named grid areas */
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+/* 2) grid container layout (matches book) */
+#wrapper {
+  background-color: #b3c7e6;
+  color: #000066;
+  width: 80%;
+  margin: auto;
+  min-width: 850px;
+
+  display: grid;
+  grid-template-columns: 150px 1fr 30%;
+  grid-template-rows: 100px auto 50px;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+}
+
+/* header styling */
+header {
+  background-color: #869dc7;
+  color: #00005D;
+  font-size: 150%;
+  padding: 10px 10px 10px 155px;
+  background-image: url(images/header.jpg);
+  background-repeat: no-repeat;
+}
+
+/* nav styling */
+nav {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  background-color: #b3c7e6;
+  border-bottom: 1px solid #ffffff;
+}
+
+nav a:link { color: #ffffff; }
+nav a:visited { color: #eaeaea; }
+nav a:hover { background-color: #eaeaea; color: #869dc7; }
+
+/* main + aside boxes */
+main {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+aside {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+}
+
+/* footer */
+footer {
+  font-size: 70%;
+  text-align: center;
+  padding: 10px;
+  background-color: #869dc7;
+}
+
+h2 {
+  color: #869dc7;
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+
+<header>
+  <h1>Casita Sedona</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="specials.html">Specials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2>Located in the Heart of Sedona</h2>
+  <p>At Casita Sedona Bed &amp; Breakfast you will be on a glorious, relaxing vacation. Whether you are visiting for hiking, sightseeing, or just relaxing, you will find the beauty of Sedona inspiring.</p>
+
+  <h2>Luxurious Rooms</h2>
+  <p>Stay in one of our beautifully appointed rooms with private bath, fine linens, and scenic views of the red rocks.</p>
+
+  <h2>Hearty Breakfast</h2>
+  <p>Each morning enjoy a hearty breakfast that includes your choice of eggs, freshly baked pastries, fruit, and beverages.</p>
+
+  <h2>About Your Hosts</h2>
+  <p>Your hosts are long-time Sedona residents who know the area well and enjoy sharing their favorite places with guests.</p>
+</main>
+
+<aside>
+  <h2>Guided Hikes</h2>
+  <p>Explore the breathtaking scenery of Sedona with a guided hike. Our experienced guides will take you on unforgettable adventures through red rock canyons and desert landscapes.</p>
+
+  <p><img src="images/scenery.jpg" alt="Sedona scenery" style="max-width:100%; height:auto;"></p>
+</aside>
+
+<footer>
+  Copyright &copy; 2020
+</footer>
+
+</div>
+</body>
+</html>
